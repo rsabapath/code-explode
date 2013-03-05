@@ -17,6 +17,14 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
+group :test, :development do
+  gem 'turn'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'rb-fsevent', '~> 0.9'
+  gem 'guard-rspec'
+  gem 'growl_notify'
+end
   gem 'uglifier', '>= 1.0.3'
 end
 

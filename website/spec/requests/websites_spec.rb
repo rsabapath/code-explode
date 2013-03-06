@@ -5,7 +5,7 @@ describe "Projects" do
     it "display some projects" do
       @project = Project.create :author => 'Selesse',
                                 :title => 'selesse.com',
-                                :image => '/demo',
+                                :image => '/demo'
       visit projects_path
       page.should have_content 'Selesse'
     end

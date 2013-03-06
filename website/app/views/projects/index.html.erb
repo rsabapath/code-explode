@@ -3,7 +3,8 @@
 <% @projects.each do |project| %>
 <div>
   <h2><%= project.title %></h2>
-  <p>Img would go here</p>
+  <img src'<%= project.image %>' alt="Project Image">
   <p>By <%= project.author %></p>
+  <a href="http://<%= project.link %>" target="_blank"><%= project.link %></a>
 </div>
 <% end %>

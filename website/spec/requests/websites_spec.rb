@@ -1,13 +1,12 @@
 require 'spec_helper'
 
 describe "Projects" do
-  describe "GET /projects" do
-    it "display some projects" do
-      @project = Project.create :author => 'Selesse',
-                                :title => 'selesse.com',
-                                :image => '/demo'
-      visit projects_path
-      page.should have_content 'Selesse'
-    end
+  subject { page }
+
+  describe "Projects Home Page" do
+    before { visit projects_path }
+
+    it { should have_selector('h1',   text: 'Projects') }
+    it { should have_selector('title', text: full_title('Projects')) }
   end
 end
